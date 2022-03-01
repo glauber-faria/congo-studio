@@ -20,7 +20,7 @@ export default function Form() {
                     <h1 className='form-h1'> Informações de <br/>contato</h1>
                     <div className='form-contato-text'>Entre em contato com a gente para<br/> trocarmos uma idéia e peça seu<br/> orçamento.</div>
                 </div>
-                <div className='form-contato'>
+                <div className='form-contato' style={{marginBottom:'30px'}}>
                     <div>
                         <img src={wppImg}></img>
                     </div>

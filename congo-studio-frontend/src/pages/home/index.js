@@ -12,16 +12,17 @@ import "./style.css"
 import { useEffect } from "react";
 
 
+const carrousel =  [boamassaimg, glauberfariaimg, helpfarma, manueimg];
 export default function Home() {
-    const carrousel =  [boamassaimg, glauberfariaimg, helpfarma, manueimg];
     useEffect(() => {
-        const x = document.getElementsByClassName("banner");
+        const x = document.getElementsByClassName("banner"); 
         var i = 0;
-        const interval = setInterval(() => {
+        setInterval(() => {
             x[0].style.background = `linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url(${carrousel[i]}) no-repeat`;
             x[0].style.backgroundPosition = `top, center`;
             x[0].style.backgroundSize = `contain, cover`;
-            i == (carrousel.length-1) ? i = 0: i++;
+            x[0].focus();
+            i === (carrousel.length-1) ? i = 0: i++;
         }, 8000);
     }, []);
     return (
@@ -31,11 +32,11 @@ export default function Home() {
             </div>
             <div className="banner">
                 <button className="button">ver mais</button>
-                <img src={down}></img>
+                <img src={down} alt="down"></img>
             </div>
             <div className="sobre">
                 <div>
-                    <img src={ilustracao} className="ilustracao"></img> 
+                    <img src={ilustracao} className="ilustracao" alt="ilustração"></img> 
                 </div>
                 <div>
                     <h3>Sobre nós</h3>

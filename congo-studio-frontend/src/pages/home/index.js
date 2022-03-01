@@ -4,9 +4,26 @@ import Menu from "../../components/menu";
 import PortifolioList from "../../components/portifoliolist";
 import down from "../../img/down.png"
 import ilustracao from "../../img/Ilustração.png"
+import boamassaimg from "../../img/carrousel/boamassa.png"
+import manueimg from "../../img/carrousel/manue.png"
+import glauberfariaimg from "../../img/carrousel/glauberfaria.png"
+import helpfarma from "../../img/carrousel/helpfarma.png"
 import "./style.css"
+import { useEffect } from "react";
+
 
 export default function Home() {
+    const carrousel =  [boamassaimg, glauberfariaimg, helpfarma, manueimg];
+    useEffect(() => {
+        const x = document.getElementsByClassName("banner");
+        var i = 0;
+        const interval = setInterval(() => {
+            x[0].style.background = `linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url(${carrousel[i]}) no-repeat`;
+            x[0].style.backgroundPosition = `top, center`;
+            x[0].style.backgroundSize = `contain, cover`;
+            i == (carrousel.length-1) ? i = 0: i++;
+        }, 8000);
+    }, []);
     return (
         <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div>
@@ -18,7 +35,7 @@ export default function Home() {
             </div>
             <div className="sobre">
                 <div>
-                    <img src={ilustracao} className="ilustracao"></img>
+                    <img src={ilustracao} className="ilustracao"></img> 
                 </div>
                 <div>
                     <h3>Sobre nós</h3>

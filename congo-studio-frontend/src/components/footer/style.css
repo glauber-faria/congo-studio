@@ -1,0 +1,23 @@
+.footer-container{
+    background-color: #FFCA82;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer-container-socialmedia{
+    display: flex;
+    align-items: center;
+}
+.footer-text{
+    color: #FF795B;
+    font-size: 17px;
+}
+.footer-img{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin: 37px 22px;
+}
+.footer-bolder{
+    font-weight: 600;
+}

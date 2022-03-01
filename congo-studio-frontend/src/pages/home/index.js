@@ -1,4 +1,5 @@
 import Form from "../../components/form";
+import Footer from "../../components/footer";
 import Menu from "../../components/menu";
 import PortifolioList from "../../components/portifoliolist";
 import down from "../../img/down.png"
@@ -31,6 +32,9 @@ export default function Home() {
             </div>
             <div className="form">
                 <Form />
+            </div>
+            <div className="footer">
+                <Footer />
             </div>
         </div>
     );

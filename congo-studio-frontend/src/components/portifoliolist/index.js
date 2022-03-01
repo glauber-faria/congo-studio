@@ -4,7 +4,7 @@ import list from "./list.js";
 
 export default function PortifolioList() {
     const [portifolio, setPortifolio] = useState(list);
-    const [selected, setSelected] = useState(2);
+    const [selected, setSelected] = useState(0);
     useEffect(() => {
     }, []);
 
@@ -17,7 +17,6 @@ export default function PortifolioList() {
         return (
             <div className="portifolio-container-img">
                 {portifolioFilter[0].product.map((product) => {
-                    { console.log(product.img) }
                     return (<img src={product.img} className="portifolio-images"></img>)
                 })}
             </div>

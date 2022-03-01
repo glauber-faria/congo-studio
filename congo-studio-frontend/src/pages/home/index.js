@@ -1,3 +1,4 @@
+import Form from "../../components/form";
 import Menu from "../../components/menu";
 import PortifolioList from "../../components/portifoliolist";
 import down from "../../img/down.png"
@@ -29,21 +30,7 @@ export default function Home() {
                 <PortifolioList />
             </div>
             <div className="form">
-                <div>
-                    <h1>Form</h1>
-                </div>
-                <div>
-                    <div>
-                        <h1> Informações de contato</h1>
-                        <div>Entre em contato com a gente para trocarmos uma idéia e peça seu orçamento.</div>
-                    </div>
-                    <div>
-                        24 98883-4093
-                    </div>
-                    <div>
-                        contato@congostudio.com
-                    </div>
-                </div>
+                <Form />
             </div>
         </div>
     );

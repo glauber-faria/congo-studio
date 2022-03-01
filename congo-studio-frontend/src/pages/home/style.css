@@ -51,11 +51,10 @@ h3{
     justify-content: center;
     position: relative;
     top: 1150px;
-    margin: 0px 300px;
+    margin: 20px 300px;
 }
 .form{
-    display: flex;
-    justify-content: space-around;
     position: relative;
     top: 1150px;
+    margin: 20px 23pc;
 }
